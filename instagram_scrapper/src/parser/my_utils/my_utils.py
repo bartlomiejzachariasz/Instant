@@ -16,7 +16,7 @@ class LossHistory(Callback):
 
 def create_generator(start=0,stop=0.7,batch_size=300,verbose = False,output = "labels"):
     
-    assert start<=stop and start >= 0 and stop <= 1 and batch_size<PHOTOS_IN_CHUNK
+    assert start<=stop and start >= 0 and stop <= 1 and batch_size<=PHOTOS_IN_CHUNK
     
     batches_in_chunk = int(PHOTOS_IN_CHUNK/batch_size)
     start = int(start*(NUMBER_OF_PHOTOS))
